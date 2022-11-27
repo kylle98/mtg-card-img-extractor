@@ -13,7 +13,10 @@ def getImgLink(url):
             htmlCode = driver.page_source
             bsElement = BeautifulSoup(htmlCode, "html.parser")
             results = bsElement.find('img', class_="card-img-top")
-            return results['src']
+            if (results != None):
+                return results['src']
+            else:
+                return "Element not found"
         finally:
             driver.quit()
 
