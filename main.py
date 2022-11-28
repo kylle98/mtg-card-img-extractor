@@ -17,7 +17,7 @@ def getImgLink(url, usingBrowser):
                 if (result['src']):
                     return result['src']
                 else:
-                    return "Link didn't found"
+                    return None
             else:
                 return None
         finally:
